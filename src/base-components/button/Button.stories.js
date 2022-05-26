@@ -1,8 +1,17 @@
 import { Button } from './Button';
 
 export default {
+  title: 'Core components react/Button',
   component: Button,
-  title: 'Core Components/Button',
 };
 
-export const Default = (args) => <Button {...args} text="Button" />;
+export function Default(args) {
+  return <Button {...args} />;
+}
+
+Button.args = {
+  label: 'Label',
+  // size: 'large',
+  isDisabled: false,
+  isLoading: false,
+};

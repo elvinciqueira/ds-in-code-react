@@ -2,24 +2,27 @@ import { ButtonBase } from './styles';
 import PropTypes from 'prop-types';
 
 export const Button = ({
-  text,
+  label,
   isLoading = false,
   isDisabled = false,
+  type = 'button',
   onClick = () => {},
 }) => (
   <ButtonBase
+    type={type}
     disabled={isDisabled}
     isLoading={isLoading}
     aria-disabled={isDisabled}
     aria-label={isLoading ? 'Loading' : undefined}
     onClick={onClick}
   >
-    {text}
+    {label}
   </ButtonBase>
 );
 
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  label: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
