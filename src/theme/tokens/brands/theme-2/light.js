@@ -21,8 +21,4 @@ export const light = {
   neutralElements01: '#A3A3A3',
   neutralElements02: '#666666',
   neutralElements03: '#000000',
-  fontFamily01: 'Archivo',
-  fontWeightBold: 700,
-  fontweightMedium: 600,
-  fontweightRegular: 400,
 };

@@ -1,4 +1,4 @@
-import * as colors from './brands';
+import { colors } from './brands';
 
 const space = {
   spacingSizeQuarck: '4px',
@@ -62,6 +62,9 @@ const radii = {
   borderRadiusLg: '24px',
   borderRadiusPill: '500px',
   borderRadiusCircular: '50%',
+};
+
+const borders = {
   borderWidthNone: '0px',
   borderWidthHairline: '1px',
   borderWidthThin: '2px',
@@ -93,4 +96,25 @@ const fontSizes = {
   fontSizeGiant: '96px',
 };
 
-export { space, shadows, opacity, radii, lineHeights, fontSizes, colors };
+const fontFamily = {
+  fontFamily01: 'Archivo',
+};
+
+const fontWeights = {
+  fontWeightBold: 700,
+  fontweightMedium: 600,
+  fontweightRegular: 400,
+};
+
+export const globals = {
+  space,
+  shadows,
+  opacity,
+  radii,
+  lineHeights,
+  fontSizes,
+  colors,
+  fontFamily,
+  fontWeights,
+  borders,
+};

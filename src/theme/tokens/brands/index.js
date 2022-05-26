@@ -1,7 +1,7 @@
-import * as theme1 from './theme1';
-import * as theme2 from './theme2';
+import { theme1 } from './theme-1';
+import { theme2 } from './theme-2';
 
-export const brands = {
+export const colors = {
   theme1: {
     ...theme1,
   },

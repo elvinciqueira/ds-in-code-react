@@ -21,8 +21,4 @@ export const dark = {
   neutralElements01: '#CCCCCC',
   neutralElements02: '#E0E0E0',
   neutralElements03: '#FFFFFF',
-  fontFamily01: 'Archivo',
-  fontWeightBold: 700,
-  fontweightMedium: 600,
-  fontweightRegular: 400,
 };
