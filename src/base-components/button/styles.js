@@ -21,10 +21,10 @@ export const ButtonBase = styled.button`
     outline-width: ${({ theme }) => theme.borders.borderWidthThin};
   }
 
-  ${({ isLoading }) => (isLoading ? loadingStyle : withoutLoadingStyle)};
+  ${({ isLoading }) => (isLoading ? withLoadingStyle : withoutLoadingStyle)};
 `;
 
-const loadingStyle = css`
+const withLoadingStyle = css`
   color: transparent;
   position: relative;
   cursor: initial;
