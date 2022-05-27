@@ -1,5 +1,5 @@
 import { UIProvider } from '../src/theme/provider/UIProvider';
-import { globals } from '../src/theme/tokens/globals';
+import { createTheme } from '../src/theme/createTheme';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -50,12 +50,7 @@ export const decorators = [
       style = `.sb-show-main{ background: #292929 !important;}`;
     }
 
-    const theme = {
-      ...globals,
-      colors: {
-        ...globals.colors[context?.globals?.theme][context?.globals?.mode],
-      },
-    };
+    const theme = createTheme(context.globals.theme, context.globals.mode);
 
     if (context.globals.mode == 'dark') {
       style = `.sb-show-main{ background: #292929 !important;}`;
