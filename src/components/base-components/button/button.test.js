@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '../../../infra/tests/testUtils';
-import { Button } from './Button';
+import { Button } from './button';
 
 describe('<Button />', () => {
   const defaultProps = {
