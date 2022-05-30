@@ -17,7 +17,7 @@ export const Checkbox = ({
 
   const _handleChange = () => {
     setChecked(!isChecked);
-    onChange(!isChecked);
+    onChange({ checked: !isChecked });
   };
 
   const _handleKeyUp = (e) => {
@@ -26,7 +26,7 @@ export const Checkbox = ({
 
     if (isEnterKey || isSpaceKey) {
       setChecked(!isChecked);
-      onChange(!isChecked);
+      onChange({ checked: !isChecked });
     }
   };
 
@@ -35,6 +35,7 @@ export const Checkbox = ({
       htmlFor={name}
       role="checkbox"
       aria-checked={isChecked}
+      aria-disabled={isDisabled}
       tabIndex="0"
       onKeyUp={_handleKeyUp}
       isDisabled={isDisabled}

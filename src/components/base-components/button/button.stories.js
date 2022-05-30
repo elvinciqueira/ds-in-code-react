@@ -6,7 +6,7 @@ export default {
 };
 
 export function Default(args) {
-  return <Button {...args} />;
+  return <Button label="Button" {...args} />;
 }
 
 Button.args = {
