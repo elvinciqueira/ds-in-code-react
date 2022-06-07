@@ -17,19 +17,34 @@ describe('<Button />', () => {
     expect(screen.getByRole('button')).toHaveAttribute('type', 'submit');
   });
 
-  test('when enabled then aria-disable attribute its false', () => {
-    renderComponent();
-    expect(screen.getByRole('button')).toHaveAttribute(
-      'aria-disabled',
-      'false'
-    );
-    expect(screen.getByRole('button')).toBeEnabled();
+  describe('when enabled', () => {
+    test('then aria-disable attribute its false', () => {
+      renderComponent();
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'aria-disabled',
+        'false'
+      );
+    });
+
+    test('button is enabled', () => {
+      renderComponent();
+      expect(screen.getByRole('button')).toBeEnabled();
+    });
   });
 
-  test('when disabled then aria-disable attribute its true', () => {
-    renderComponent({ isDisabled: true });
-    expect(screen.getByRole('button')).toHaveAttribute('aria-disabled', 'true');
-    expect(screen.getByRole('button')).toBeDisabled();
+  describe('when disabled', () => {
+    test('then aria-disable attribute its true', () => {
+      renderComponent({ isDisabled: true });
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'aria-disabled',
+        'true'
+      );
+    });
+
+    test('button is disabled', () => {
+      renderComponent({ isDisabled: true });
+      expect(screen.getByRole('button')).toBeDisabled();
+    });
   });
 
   test('when loading then aria-label sets to Loading', () => {
