@@ -1,17 +1,11 @@
 import PropTypes from 'prop-types';
 import { Container } from './styles';
 
-export const CardBase = ({ children, onClick }) => {
-  const _handleClick = () => {
-    if (onClick) onClick(true);
-  };
-
-  return (
-    <Container tabIndex="0" onClick={_handleClick}>
-      {children}
-    </Container>
-  );
-};
+export const CardBase = ({ children, onClick }) => (
+  <Container data-testid="card-base" tabIndex={0} onClick={onClick}>
+    {children}
+  </Container>
+);
 
 CardBase.propTypes = {
   onClick: PropTypes.func,
