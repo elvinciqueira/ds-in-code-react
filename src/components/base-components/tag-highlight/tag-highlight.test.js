@@ -5,14 +5,14 @@ import { TagHighlight } from './tag-highlight';
 describe('<TagHightlight />', () => {
   describe('with role', () => {
     test('semantic meaning content', () => {
-      render(<TagHighlight role="button" />);
-      expect(screen.getByRole('button')).toBeInTheDocument();
+      render(<TagHighlight role="link" />);
+      expect(screen.getByRole('link')).toBeInTheDocument();
     });
   });
 
   describe('with tabindex', () => {
     test('when tabindex -1 and tab is pressed then do not focus', () => {
-      render(<TagHighlight tabIndex={-1} role="button" />);
+      render(<TagHighlight tabIndex={-1} />);
 
       userEvent.tab();
 
@@ -20,7 +20,7 @@ describe('<TagHightlight />', () => {
     });
 
     test('when tabindex default and tab is pressed then focus on element', () => {
-      render(<TagHighlight tabIndex={0} role="button" />);
+      render(<TagHighlight tabIndex={0} />);
 
       userEvent.tab();
 
