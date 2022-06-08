@@ -11,6 +11,7 @@ export const RadioButton = ({
       value: 'A',
       checked: false,
       disabled: false,
+      name: 'a',
     },
   ],
   onChange,
@@ -30,7 +31,7 @@ export const RadioButton = ({
     const isSpaceKey = event.code === 'Space';
     const isEnterKey = event.code === 'Enter';
 
-    if (isSpaceKey || isEnterKey) {
+    if (isEnterKey || isSpaceKey) {
       if (disabled) return;
 
       setCheckedOpt(index);
@@ -46,15 +47,15 @@ export const RadioButton = ({
         return (
           <RadioButtonLabel
             key={index}
-            htmlFor={name}
+            data-testid="radio-label"
+            htmlFor={item.name}
             aria-checked={isChecked}
-            onClick={() => _handleChange(index, item.disabled)}
             onKeyUp={(event) => _handleKeyUp(event, index, item.disabled)}
             isDisabled={item.disabled}
           >
             <InputRadioButton
               type="radio"
-              id={name}
+              id={item.name}
               name={name}
               checked={isChecked}
               disabled={item.disabled}
