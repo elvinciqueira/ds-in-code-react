@@ -9,4 +9,6 @@ export const Default = Checkbox.bind({});
 Default.args = {
   name: 'checkbox',
   label: 'Checkbox',
+  checked: false,
+  isDisabled: false,
 };

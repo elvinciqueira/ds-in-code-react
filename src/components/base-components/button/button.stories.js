@@ -11,7 +11,6 @@ export function Default(args) {
 
 Button.args = {
   label: 'Label',
-  // size: 'large',
   isDisabled: false,
   isLoading: false,
 };
