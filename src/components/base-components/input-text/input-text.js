@@ -35,15 +35,15 @@ export const InputText = ({
     if (onBlur) onBlur(e);
   };
 
-  const inputFocus = () => {
-    inputRef.current.focus();
-  };
-
   const _handleKeyBoardEvents = (e) => {
     if (e.code === 'Tab') {
       setKeyboardFocus(true);
       inputFocus();
     }
+  };
+
+  const inputFocus = () => {
+    inputRef.current.focus();
   };
 
   return (
