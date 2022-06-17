@@ -77,8 +77,8 @@ export const Input = ({
 
 Input.propTypes = {
   type: PropTypes.string,
-  tag: PropTypes.oneOf(['input', 'textarea']),
   name: PropTypes.string.isRequired,
+  tag: PropTypes.oneOf(['input', 'textarea']),
   label: PropTypes.string.isRequired,
   error: PropTypes.bool,
   placeholder: PropTypes.string,
