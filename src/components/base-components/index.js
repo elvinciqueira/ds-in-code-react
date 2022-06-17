@@ -6,3 +6,4 @@ export * from './tag-highlight';
 export * from './switch';
 export * from './typograhy';
 export * from './link';
+export * from './input-text';
