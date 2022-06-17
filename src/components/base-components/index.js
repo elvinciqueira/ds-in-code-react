@@ -7,3 +7,4 @@ export * from './switch';
 export * from './typograhy';
 export * from './link';
 export * from './input-text';
+export * from './input-textarea';
